@@ -85,6 +85,14 @@ nav ul {
   border-radius: 15px;
   margin-top: 35px;
 }
+.barre-de-recherche i.fa-solid.fa-location-dot {
+  background-color: #f2f2f2;
+  padding: 18px;
+  margin: auto;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: black;
+}
 .barre-de-recherche input[type="text"] {
   border: none;
   text-align: center;
@@ -96,23 +104,28 @@ nav ul {
   color: black;
   font-weight: 700;
 }
-.barre-de-recherche input[type="submit"] {
+.bouton-rechercher {
+  border: none;
+  background-color: white;
+}
+.barre-de-recherche span.texte {
+  display: inline-block;
   border: none;
   background-color: #0065fc;
   color: white;
+  text-align: center;
   font-size: 18px;
   font-weight: 700;
   padding: 15px 16px 15px 16px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 100%;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
 }
-.barre-de-recherche img {
-  background-color: #f2f2f2;
-  padding: 15px 18px 15px 18px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  width: 100%;
+.bouton-rechercher i {
+  display: none;
 }
 
 .filtres span,
@@ -135,10 +148,17 @@ nav ul {
   border: 2px solid rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 4px 19px 4px 19px;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
 }
 .filtres a:hover {
   background-color: #deebff;
+}
+.filtres i {
+  font-size: 20px;
+}
+i.fa-solid.fa-person {
+  font-size: 23px;
 }
 
 .texte-en-bas {
@@ -146,6 +166,16 @@ nav ul {
   align-items: center;
   margin: 35px 0;
   gap: 10px;
+}
+i.fa-solid.fa-info {
+  border: 2px solid #f2f2f2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
 }
 
 a {
@@ -185,23 +215,78 @@ a {
 .flat-grid-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 35px;
+  gap: 30px;
 }
 
 .flat-grid-wrapper section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
-  padding: 30px;
   box-sizing: border-box;
+  padding: 30px;
 }
 
 /****** Hebergements ***********/
 .hebergements {
-  width: 65%;
+  width: 900px;
+}
+
+.hebergements-cards {
+  min-width: 900px;
+}
+
+.hebergements-cards .card {
+  display: inline-block;
+  max-width: 250.33px;
+  height: 207.25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 25px;
+}
+
+.hebergements-cards img {
+  min-width: 250.33px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 50%;
+}
+
+.hebergements-cards .card-content {
+  display: inline-block;
+  flex-direction: row;
+}
+
+.hebergements-cards .card-title {
+  margin-top: 8px;
+  margin-left: 15px;
+}
+
+.hebergements-cards .card-subtitle {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  margin-left: 15px;
+}
+
+.hebergements-cards .card-rating {
+  margin-left: 15px;
+  margin-bottom: 8px;
+}
+
+.hebergements .card-more {
+  font-weight: 700;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 32.5px;
 }
 
 /****** Populaires ***********/
 .populaires {
   width: 32%;
+}
+
+.populaires-cards {
+  max-width: 429px;
 }
 
 .populaires-title {
@@ -340,9 +425,60 @@ footer ul li {
     color: black;
     padding: 15px 0;
     border-top: none;
+    display: block;
   }
 
   .lien-header:hover {
     border-bottom-color: #0065fc;
+  }
+
+  i.fa-solid.fa-magnifying-glass {
+    display: inline-block;
+    border: none;
+    background-color: #0065fc;
+    color: white;
+    align-items: center;
+    padding: 15px 16px 15px 16px;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .barre-de-recherche span.texte {
+    display: none;
+  }
+
+  .filtres {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+  .filtres span {
+    font-size: 18px;
+    font-weight: bold;
+    flex-basis: 100%;
+    display: flex;
+  }
+
+  .filtres a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 48%;
+    max-width: 134px;
+    height: 30px;
+    padding: 4px;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .filtres a span {
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .filtres i {
+    margin: 0;
+    padding: 0;
   }
 }
