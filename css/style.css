@@ -199,7 +199,7 @@ a {
 .card {
   background-color: white;
   border-radius: 20px;
-  padding: 5px;
+  padding: 4px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
@@ -230,29 +230,31 @@ a {
 .flat-grid-wrapper section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
-  padding: 30px 40px 30px 40px;
+  padding: 30px;
 }
 
 /****** Hebergements ***********/
 .hebergements {
   width: 68%;
 }
-
+.hebergements-title {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
 .hebergements-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 .hebergements-cards a {
-  width: 30%;
+  flex: 1 1 28%;
+  display: block;
 }
-
 .hebergements-cards .card {
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
 }
-
 .hebergements-cards .hebergements-img-wrapper {
   height: 124px;
   overflow: hidden;
@@ -261,7 +263,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 .hebergements-cards img {
   position: absolute;
   width: 100%;
@@ -270,46 +271,44 @@ a {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
 .hebergements-cards .card-content {
   display: inline-block;
   flex-direction: row;
   overflow: hidden;
 }
-
 .hebergements-cards .card-title {
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 0;
 }
-
 .hebergements-cards .card-subtitle {
   margin-top: 8px;
   margin-bottom: 6px;
   margin-left: 8px;
 }
-
 .hebergements-cards .card-rating {
   margin-left: 8px;
   margin-bottom: 8px;
 }
-
 .hebergements-link {
   display: inline-block;
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 18px;
 }
-
 .hebergements-link:hover {
   text-decoration: underline;
 }
 
 /****** Populaires ***********/
 .populaires {
-  width: 32%;
+  width: 30%;
   display: flex;
   flex-direction: column;
+}
+.title {
+  font-size: 22px;
+  margin: 0;
 }
 
 .populaires-cards {
@@ -327,11 +326,12 @@ a {
 .populaires-cards .card {
   display: flex;
   margin-top: 33px;
+  height: 146px;
 }
 
 .populaires-cards img {
   width: 33%;
-  height: 138px;
+  height: 146px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
