@@ -103,9 +103,10 @@ nav ul {
 
 .barre-de-recherche input[type="text"] {
   border: none;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   font-weight: 700;
+  padding: 15px;
   color: black;
 }
 .barre-de-recherche input::placeholder {
@@ -126,7 +127,7 @@ nav ul {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px 16px 15px 16px;
+  padding: 16px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
@@ -513,7 +514,7 @@ footer a:hover {
     padding: 0;
   }
   .populaires-cards .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
   .populaires-cards .card-subtitle {
     font-size: 13px;
@@ -599,6 +600,9 @@ footer a:hover {
   }
   .barre-de-recherche span.texte {
     display: none;
+  }
+  .barre-de-recherche input[type="text"] {
+    text-align: center;
   }
 
   .filtres {
