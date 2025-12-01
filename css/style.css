@@ -452,10 +452,6 @@ footer a:hover {
     right: 0;
   }
 
-  .barre-de-recherche input[type="text"] {
-    text-align: left;
-  }
-
   .hebergements {
     width: auto;
     justify-content: space-between;
@@ -595,11 +591,10 @@ footer a:hover {
 
   i.fa-solid.fa-magnifying-glass {
     display: inline-block;
-    border: none;
     background-color: #0065fc;
     color: white;
     align-items: center;
-    padding: 15px 16px 15px 16px;
+    padding: 20px;
     border-radius: 15px;
   }
   .barre-de-recherche span.texte {
